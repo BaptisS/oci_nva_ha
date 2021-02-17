@@ -11,7 +11,9 @@ The following document will guide you through the configuration of HA scenarios 
 
 1.1- Provision NAT instances on Oracle linux (for the purpose of the demonstration)
 
-      Collect required OCID (Nodes's Vnics + private VIP OCID) 
+      Collect required OCID (Nodes's Vnics + private VIP OCID)
+      - Nodes primary network interface OCID
+      - Secondary private ip address OCID (known as 'private vip')
       
 2.1- Create your Fn HC App
 
