@@ -15,6 +15,11 @@ The following document will guide you through the configuration of HA scenarios 
       
 2.1- Create your Fn HC App
 
+
+![PMScreens](https://github.com/BaptisS/oci_nva_ha/blob/main/img/FnConf00.JPG)
+
+
+
 3- Create Dynamic Group + IAM Policies.
 
 3.1- Create Dynamic Group.
