@@ -17,6 +17,20 @@ The following document will guide you through the configuration of HA scenarios 
 
 3.1- Create Dynamic Group + IAM Policies.
 
+''
+
+Allow dynamic-group BSHA_GRP to use private-ips in compartment CSMs:Baptiste
+
+Allow dynamic-group BSHA_GRP to use vnics in compartment CSMs:Baptiste
+
+Allow dynamic-group BSHA_GRP to read instance-family in compartment CSMs:Baptiste
+
+Allow dynamic-group BSHA_GRP to read Virtual-network-family in compartment CSMs:Baptiste
+
+ALLOW any-user to use functions-family in compartment CSMs:Baptiste where ALL {request.principal.type= 'ApiGateway', request.resource.compartment.id = 'ocid1.compartment.oc1..aaaaaxxxxxxxxxxxxxx'}
+
+''
+
 4.1- Create an API Gateway instance to expose your Fn App. 
 
 5.1- Create an Health Check instance to trigger regular execution of Fn App.
