@@ -42,4 +42,8 @@ The following document will guide you through the configuration of HA scenarios 
 
 5.1- Create an Health Check instance to trigger regular execution of Fn App.
 
+
+![PMScreens](https://github.com/BaptisS/oci_nva_ha/blob/main/img/FnHC00z.JPG)
+
+
 6.1- Verify Failover.  
