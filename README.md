@@ -15,7 +15,13 @@ The following document will guide you through the configuration of HA scenarios 
       
 2.1- Create your Fn HC App
 
-3.1- Create Dynamic Group + IAM Policies.
+3- Create Dynamic Group + IAM Policies.
+
+3.1- Create Dynamic Group.
+
+      ALL {resource.type = 'fnfunc', resource.compartment.id = 'ocid1.compartment.oc1..aaaaaxxxxxxxxxxxxxx'}
+
+3.2- Create IAM Policies.
 
       Allow dynamic-group BSHA_GRP to use private-ips in compartment CSMs:Baptiste
       Allow dynamic-group BSHA_GRP to use vnics in compartment CSMs:Baptiste
