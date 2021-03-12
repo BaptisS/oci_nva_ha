@@ -37,6 +37,7 @@ def handler(ctx, data: io.BytesIO=None):
     
     probe_url = os.getenv("probe_url")    
     probe_timeout = int(os.getenv("probe_timeout"))
+    probe_keyword = os.getenv("probe_keyword")
 
     i=0
     failcount=0
@@ -48,7 +49,7 @@ def handler(ctx, data: io.BytesIO=None):
         try:
             probe = requests.get(probe_url, timeout=probe_timeout)
             logging.getLogger().info('\nHTTP code:', probe.status_code)
-            keyword = 'buttonv2.jpg'
+            keyword = probe_keyword
             probedata = probe.text
             result = probedata.find(keyword)
             if result > 0:
