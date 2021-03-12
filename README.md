@@ -17,9 +17,27 @@ The following document will guide you through the configuration of HA scenarios 
       
 2.1- Create your Fn HC App
 
+2.1.1- OCI Menu --> Developper Services --> Functions --> Create Application 
+
+- Provide a Name (ie. 'nvahc')
+- Choose a VCN and select up to 3 subnets to host your Fn instance. 
+
+2.1.2- Follow the 'Getting started' (Cloud Shell Setup) Steps. [Step 1 -> Step 7]
+
+2.1.3- Execute the following commands : 
+
+      mkdir nvahc
+      cd nvahc
+      wget https://raw.githubusercontent.com/BaptisS/oci_nva_ha/main/requirements.txt
+      wget https://raw.githubusercontent.com/BaptisS/oci_nva_ha/main/func.py
+      wget https://raw.githubusercontent.com/BaptisS/oci_nva_ha/main/func.yaml
+      fn -v deploy --app nvahc
+
+
+
+2.2- Add Required Variables as shown below
 
 ![PMScreens](https://github.com/BaptisS/oci_nva_ha/blob/main/img/FnConf01.JPG)
-
 
 
 3- Create Dynamic Group + IAM Policies.
