@@ -18,7 +18,7 @@ The following document will guide you through the configuration of HA scenarios 
 2.1- Create your Fn HC App
 
 
-![PMScreens](https://github.com/BaptisS/oci_nva_ha/blob/main/img/FnConf00.JPG)
+![PMScreens](https://github.com/BaptisS/oci_nva_ha/blob/main/img/FnConf01.JPG)
 
 
 
