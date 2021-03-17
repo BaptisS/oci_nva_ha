@@ -1,5 +1,5 @@
 resource "oci_functions_application" "BSFnApp" {
-    compartment_id = oci_identity_compartment.BSCompartment.id
+    compartment_id  = var.compartment_ocid
     display_name = "nva_ha"
     subnet_ids = [oci_core_subnet.BSPublicSubnet.id]
 }
