@@ -24,6 +24,25 @@ The following document will guide you through the configuration of HA scenarios 
 
 2.1.2- Follow the 'Getting started' (Cloud Shell Setup) Steps. [Step 1 -> Step 7]
 
+Replace export variable with appropriate values.
+
+      export fncompocid=ocid1.compartment.oc1..aaaaaxxxxx 
+      export region=eu-frankfurt-1
+      export region_short=fra
+      export ocirepo=YourOCIFunctionRepositoryName
+      export authcred=YourAuthToken
+      export username=oracleidentitycloudservice/YourOCIUserName@account.com
+      
+      namespace=$(oci os ns get | jq .data -r)
+      
+      fn use context $region
+      fn update context oracle.compartment-id $fncompocid
+      fn update context registry $region_short.ocir.io/$namespace/[$ocirepo]
+      
+      echo $authcred |  docker login $region_short.ocir.io --username $namespace/$username
+      
+
+
 2.1.3- Execute the following commands : 
 
       mkdir nvahc
