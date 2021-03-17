@@ -40,3 +40,6 @@ variable "gateway_endpoint_type" {
 variable "deployment_path_prefix" {
   default = "/nvahc"
 }
+variable "https_ports" {
+  default = ["443"]
+}
