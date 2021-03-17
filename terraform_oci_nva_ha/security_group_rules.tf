@@ -7,7 +7,7 @@ resource "oci_core_network_security_group_security_rule" "BSSSHSecurityEgressGro
 }
 
 resource "oci_core_network_security_group_security_rule" "BSSSHSecurityIngressGroupRules" {
-    for_each = toset(var.bastion_ports)
+    for_each = toset(var.https_ports)
 
     network_security_group_id = oci_core_network_security_group.BSSSHSecurityGroup.id
     direction = "INGRESS"
