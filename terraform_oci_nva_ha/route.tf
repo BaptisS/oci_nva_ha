@@ -1,5 +1,5 @@
 resource "oci_core_route_table" "BSRouteTableViaIGW" {
-    compartment_id = oci_identity_compartment.BSCompartment.id
+    compartment_id  = var.compartment_ocid
     vcn_id = oci_core_virtual_network.BSVCN.id
     display_name = "BSRouteTableViaIGW"
     route_rules {
