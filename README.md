@@ -37,7 +37,7 @@ Replace export variable with appropriate values.
       
       fn use context $region
       fn update context oracle.compartment-id $fncompocid
-      fn update context registry $region_short.ocir.io/$namespace/[$ocirepo]
+      fn update context registry $region_short.ocir.io/$namespace/$ocirepo
       
       echo $authcred |  docker login $region_short.ocir.io --username $namespace/$username
       
@@ -50,7 +50,8 @@ Replace export variable with appropriate values.
       wget https://raw.githubusercontent.com/BaptisS/oci_nva_ha/main/requirements.txt
       wget https://raw.githubusercontent.com/BaptisS/oci_nva_ha/main/func.py
       wget https://raw.githubusercontent.com/BaptisS/oci_nva_ha/main/func.yaml
-      fn -v deploy --app nvahc
+      #fn -v deploy --app nvahc
+      fn build
 
 
 
